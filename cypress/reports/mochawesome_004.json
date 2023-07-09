@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 4,
+    "passes": 1,
+    "pending": 0,
+    "failures": 3,
+    "start": "2023-07-09T13:47:40.863Z",
+    "end": "2023-07-09T13:48:01.267Z",
+    "duration": 20404,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "329c3960-d24c-4ff8-87ca-7492db5be677",
+      "title": "",
+      "fullFile": "cypress/integration/add_product_to_cart.ts",
+      "file": "cypress/integration/add_product_to_cart.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test LOGIN",
+          "fullTitle": "Test LOGIN",
+          "timedOut": null,
+          "duration": 6795,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.\n    at LoginPage.assertLogin (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\add_product_to_cart.ts:220:25)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\add_product_to_cart.ts:108:15)",
+            "diff": null
+          },
+          "uuid": "79e48fdb-2d24-4f79-aa1e-b38acd8010ed",
+          "parentUUID": "329c3960-d24c-4ff8-87ca-7492db5be677",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Invalid Password",
+          "fullTitle": "Test Sauce Demo Invalid Password",
+          "timedOut": null,
+          "duration": 1225,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'invalidPass');\nloginPage.assertLoginFail();",
+          "err": {},
+          "uuid": "ae46b0c3-8d6c-4095-a034-4a549339663c",
+          "parentUUID": "329c3960-d24c-4ff8-87ca-7492db5be677",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Sauce labs product backpack",
+          "fullTitle": "Test Sauce Demo Sauce labs product backpack",
+          "timedOut": null,
+          "duration": 5015,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.\n    at LoginPage.assertLogin (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\add_product_to_cart.ts:220:25)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\add_product_to_cart.ts:116:15)",
+            "diff": null
+          },
+          "uuid": "edde775d-1270-4004-9bb7-c1be1becaab8",
+          "parentUUID": "329c3960-d24c-4ff8-87ca-7492db5be677",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Add Product",
+          "fullTitle": "Test Add Product",
+          "timedOut": null,
+          "duration": 5092,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();\naddProducts.clickAddToCart();\naddProducts.clickCart();\naddProducts.assertAddToCart();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.\n    at LoginPage.assertLogin (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\add_product_to_cart.ts:220:25)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\add_product_to_cart.ts:121:15)",
+            "diff": null
+          },
+          "uuid": "d4f59e19-9a05-4b88-981e-b2b10779e156",
+          "parentUUID": "329c3960-d24c-4ff8-87ca-7492db5be677",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "ae46b0c3-8d6c-4095-a034-4a549339663c"
+      ],
+      "failures": [
+        "79e48fdb-2d24-4f79-aa1e-b38acd8010ed",
+        "edde775d-1270-4004-9bb7-c1be1becaab8",
+        "d4f59e19-9a05-4b88-981e-b2b10779e156"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 18127,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

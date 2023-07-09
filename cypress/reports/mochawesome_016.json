@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-07-09T13:57:21.511Z",
+    "end": "2023-07-09T13:57:30.593Z",
+    "duration": 9082,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e1cb91a0-d286-4609-9dc6-aecea880455c",
+      "title": "",
+      "fullFile": "cypress/integration/add_product_to_cart.ts",
+      "file": "cypress/integration/add_product_to_cart.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test Add Product",
+          "fullTitle": "Test Add Product",
+          "timedOut": null,
+          "duration": 7180,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();\naddProducts.clickAddToCart();\naddProducts.clickCart();\naddProducts.assertAddToCart();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#add-to-cart-sauce-labs-bike-light`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#add-to-cart-sauce-labs-bike-light`, but never found it.\n    at AddProducts.clickAddToCart (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\add_product_to_cart.ts:148:12)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\add_product_to_cart.ts:123:17)",
+            "diff": null
+          },
+          "uuid": "fc939752-b55d-49a0-a764-f5182033cb10",
+          "parentUUID": "e1cb91a0-d286-4609-9dc6-aecea880455c",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "fc939752-b55d-49a0-a764-f5182033cb10"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 7180,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
